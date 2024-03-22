@@ -20,15 +20,43 @@
 
     
     <div class="container">
-    <section>
-        <h2 id="list-of-items">List of Items:</h2>
-        <ol id="list"></ol>
+    <section id="box1">
+        <h2>List of Items:</h2>
+        <ul id="list-of-items"></ul>
     </section>
 
-    <section>
+    <section id="box2">
+        <h3>Add Inventory: </h3>
         <form>
-            <!-- add in new items -->
+            <label for="add_inventory_name">Inventory Name</label>
+            <input type="text" id="add_inventory_name">
+
+
+            <p>Please select the type of Inventory:</p>
+            <label for="fruit">
+            <input type="radio" id="fruit" name="add_inventory_category">Fruit
+            </label><br>
+
+            <label for="dairy">
+            <input type="radio" id="dairy" name="add_inventory_category">Dairy
+            </label><br>
+
+            <label for="bread">
+            <input type="radio" id="bread" name="add_inventory_category">Bread
+            </label><br>
+
+            <br>
+            <label for="add_inventory_price">Inventory Price</label>
+            <input type="text" id="add_inventory_price"><br>
+
+            <label for="add_inventory_quantity">Inventory Quantity</label>
+            <input type="text" id="add_inventory_quantity">
+            
         </form>
+    </section>
+
+    <section id="box3">
+        <!-- a notification area under the inventory list for alerting if certain items are low in stock (3 items or fewer). -->
     </section>
 </div>
 </body>
