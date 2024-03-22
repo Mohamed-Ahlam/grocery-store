@@ -20,39 +20,44 @@
 
     
     <div class="container">
-    <section id="box1">
+
+        <section id="box1">
+            <h3>Add Inventory: </h3>
+            <form>
+                <label for="add_inventory_name">Inventory Name</label>
+                <input type="text" id="add_inventory_name" required minlength="3">
+
+
+                <p>Please select the type of Inventory:</p>
+                <label for="fruit">
+                <input type="radio" id="fruit" name="add_inventory_category">Fruit
+                </label><br>
+
+                <label for="dairy">
+                <input type="radio" id="dairy" name="add_inventory_category">Dairy
+                </label><br>
+
+                <label for="bread">
+                <input type="radio" id="bread" name="add_inventory_category">Bread
+                </label><br>
+
+                <br>
+                <label for="add_inventory_price">Inventory Price</label>
+                <input type="number" id="add_inventory_price" required min="0"><br>
+
+                <label for="add_inventory_quantity">Inventory Quantity</label>
+                <input type="number" id="add_inventory_quantity" required min="0">
+                <br>
+
+                <div >
+                <button type="submit" id="add_inventory_btn">ADD</button>
+                </div>
+            </form>
+        </section>
+    
+    <section id="box2">
         <h2>List of Items:</h2>
         <ul id="list-of-items"></ul>
-    </section>
-
-    <section id="box2">
-        <h3>Add Inventory: </h3>
-        <form>
-            <label for="add_inventory_name">Inventory Name</label>
-            <input type="text" id="add_inventory_name">
-
-
-            <p>Please select the type of Inventory:</p>
-            <label for="fruit">
-            <input type="radio" id="fruit" name="add_inventory_category">Fruit
-            </label><br>
-
-            <label for="dairy">
-            <input type="radio" id="dairy" name="add_inventory_category">Dairy
-            </label><br>
-
-            <label for="bread">
-            <input type="radio" id="bread" name="add_inventory_category">Bread
-            </label><br>
-
-            <br>
-            <label for="add_inventory_price">Inventory Price</label>
-            <input type="text" id="add_inventory_price"><br>
-
-            <label for="add_inventory_quantity">Inventory Quantity</label>
-            <input type="text" id="add_inventory_quantity">
-            
-        </form>
     </section>
 
     <section id="box3">
