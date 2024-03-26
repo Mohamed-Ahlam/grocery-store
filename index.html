@@ -19,50 +19,60 @@
     </header>
 
     
-    <div class="container">
+ <div class="container">
 
-        <section id="box1">
-            <h3>Add Inventory: </h3>
-            <form>
-                <label for="add_inventory_name">Inventory Name</label>
-                <input type="text" id="add_inventory_name" required minlength="3">
+    <div class="add_inventory">
+        <h3>Add Inventory: </h3>
+        <!-- <form> -->
+            <label for="add_inventory_name">Inventory Name</label>
+            <input type="text" id="add_inventory_name" minlength="2">
 
 
-                <p>Please select the type of Inventory:</p>
-                <label for="fruit">
-                <input type="radio" id="fruit" name="add_inventory_category">Fruit
-                </label><br>
+            <p>Please select the type of Inventory:</p>
+            <label for="add_inventory_category">
+            <input type="radio" id="add_inventory_category" name="item" value="Fruit">Fruit
+            </label><br>
 
-                <label for="dairy">
-                <input type="radio" id="dairy" name="add_inventory_category">Dairy
-                </label><br>
+            <label for="add_inventory_category">
+            <input type="radio" id="add_inventory_category" name="item" value="Dairy">Dairy
+            </label><br>
 
-                <label for="bread">
-                <input type="radio" id="bread" name="add_inventory_category">Bread
-                </label><br>
+            <label for="add_inventory_category">
+            <input type="radio" id="add_inventory_category" name="item" value="Bread">Bread
+            </label><br> <br>
 
-                <br>
-                <label for="add_inventory_price">Inventory Price</label>
-                <input type="number" id="add_inventory_price" required min="0"><br>
+            
+            <label for="add_inventory_price">Inventory Price</label>
+            <input type="number" id="add_inventory_price" min="0"><br>
 
-                <label for="add_inventory_quantity">Inventory Quantity</label>
-                <input type="number" id="add_inventory_quantity" required min="0">
-                <br>
+            <label for="add_inventory_quantity">Inventory Quantity</label>
+            <input type="number" id="add_inventory_quantity" min="0">
+            <br>
 
-                <div >
-                <button type="submit" id="add_inventory_btn">ADD</button>
-                </div>
-            </form>
-        </section>
-    
-    <section id="box2">
-        <h2>List of Items:</h2>
-        <ul id="list-of-items"></ul>
-    </section>
+            <div >
+            <button type="submit" id="add_inventory_btn">ADD</button>
+            </div>
+        <!-- </form>  idkw form doesnt work -->
+    </div>
 
-    <section id="box3">
-        <!-- a notification area under the inventory list for alerting if certain items are low in stock (3 items or fewer). -->
-    </section>
+    <!-- add in table to showcase items -->
+
+    <div>
+        <h3>List of Inventory:</h3>
+        <ul id="list-of-inventory"></ul>
+    </div>
+
+    <div>
+        <h3>Low on Inventory!!! Restocking is Needed:</h3>
+        <ul id="low-on-inventory"></ul>
+    </div>
+
+
+                <!-- 
+                    <div id="box3">
+                        a notification area under the inventory list for alerting if certain items are low in stock (3 items or fewer).
+                    </div> -->
 </div>
+    <script src="script/script.js"></script>   
 </body>
 </html>
