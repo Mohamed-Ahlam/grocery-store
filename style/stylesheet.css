@@ -1,17 +1,19 @@
 body{
-    background-color: #ffc5f2dd;
+    background-color: #2F5233;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header{
-    background-color: #9d529c;
+    background-color: #94C973;
     text-align: center;
     padding: 0px;
-    margin: 20px;
+    margin: 50px;
     border: solid;
     border-radius: 10px;
+
+    
 }
 
 /* nav bar */
@@ -19,13 +21,30 @@ header{
 nav ul li{
     display: inline;
     list-style-type: none;
-    padding: 20px;    
+    padding: 20px;  
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    padding: 20px;
+
 }
 
+nav ul li:hover{
+    
+    background-color:#2F5233;
+    color: white;
+    border: 5px solid #2F5233;
+}
+
+/* nav ul {
+    list-style-image: url('https://stock.adobe.com/search?k=red+exclamation&asset_id=513132422');
+  } */
 
 /* table  */
 table, th, td {
-    border: 1px solid white;
+    border: 1px solid #2F5233;
     border-collapse: collapse;
   }
   table {
@@ -34,10 +53,12 @@ table, th, td {
   th, td {
     background-color: #96D4D4;
     text-align: center;
+    font-size: 18px;
   }
 
   td{
     padding: 10px;
+    
   }
 
 .container{
@@ -48,16 +69,13 @@ table, th, td {
     flex-direction: column;
 
     justify-content: center;
-
-    /* max-width: 800px;
-    margin: 20px auto;
-    padding: 20px; */
 }
 .container > * {
     flex:1;
 }
 .card{
-    background-color: #FFFFFF; 
+    background-color: 
+    #B1D8B7; 
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -98,13 +116,3 @@ button {
     margin: 8px 0;
     box-sizing: border-box;
 }
-
-/* .display_inventory {     sets speccifically this without flex
-    margin: 20px;
-    padding-left: 50;
-    justify-content: center;
-}
-
-.low_inventory{
-    
-} */
