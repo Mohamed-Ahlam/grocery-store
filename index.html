@@ -21,7 +21,7 @@
     
  <div class="container">
 
-    <div class="add_inventory">
+    <div class="card add_inventory">
         <h3>Add Inventory: </h3>
         <!-- <form> -->
             <label for="add_inventory_name">Inventory Name</label>
@@ -52,26 +52,31 @@
             <div >
             <button type="submit" id="add_inventory_btn">ADD</button>
             </div>
-        <!-- </form>  idkw form doesnt work -->
+        <!-- </form>  idkw form doesnt work when i add it-->
     </div>
 
     <!-- add in table to showcase items -->
-
-    <div>
+    <div class=" card display_inventory">
         <h3>List of Inventory:</h3>
-        <ul id="list-of-inventory"></ul>
+        <table id="items_table" style="width:100%">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
 
-    <div>
+    <div class="card low_inventory">
         <h3>Low on Inventory!!! Restocking is Needed:</h3>
         <ul id="low-on-inventory"></ul>
     </div>
 
-
-                <!-- 
-                    <div id="box3">
-                        a notification area under the inventory list for alerting if certain items are low in stock (3 items or fewer).
-                    </div> -->
 </div>
     <script src="script/script.js"></script>   
 </body>

@@ -14,20 +14,50 @@ header{
     border-radius: 10px;
 }
 
+/* nav bar */
 
 nav ul li{
     display: inline;
     list-style-type: none;
-    padding: 20px;
-    
+    padding: 20px;    
 }
 
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+/* table  */
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+  table {
+    border-spacing: 50px;
+  }
+  th, td {
+    background-color: #96D4D4;
+    text-align: center;
+  }
+
+  td{
+    padding: 10px;
+  }
+
+.card{
     background-color: #FFFFFF; 
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* display: flex; */
+
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+/* 
+    margin:0;
+    padding: 0; */
 }
+
+/* .add_inventory{
+    flex: 1;
+} */
+
+/* .add_inventory{
+
+} */

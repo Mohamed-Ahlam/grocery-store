@@ -7,12 +7,11 @@ class GroceryItem {
         this.price = price;
         this.quantity = quantity;
     }
+
+    displayInfo(){
+        return `${this.name} has low stock!`
+    }
 }
-
-
-/*
-monitor stock levels and signal when restocking is needed
-*/
 
 function notifyLowInventory(arrayOfItems){
     return arrayOfItems.filter(item => item.quantity <= 3)
@@ -25,13 +24,28 @@ document.addEventListener('DOMContentLoaded', () => {
         listElement.innerHTML = '';
 
         array.forEach(item => { 
-            const arrayItem = document.createElement('li');
-            arrayItem.textContent = `Product: ${item.name}, Category:${item.category}, Price:${item.price}, Quantity:${item.quantity}`;
-            listElement.appendChild(arrayItem);
+            const arrayItem = document.createElement('li'); // creates a list on the DOM
+            arrayItem.textContent = item.displayInfo()      // calls the classes method 
+            listElement.appendChild(arrayItem);             // appends child ??
         })
     }
 
+const itemsTable = document.getElementById('items_table');
+function addItemsToTable(){
+    const tbody = itemsTable.querySelector('tbody');        // gets the table body 
+    tbody.innerHTML = '';
+    groceryInventory.forEach(item => {
+        const row = document.createElement('tr');       // creates a table row and itll put data in row from user input
+        row.innerHTML=`
+            <td>${item.name}</td>
+            <td>${item.category}</td>
+            <td>${item.price}</td>
+            <td>${item.quantity}</td>`;
+        tbody.appendChild(row);
+    })
+}
     document.getElementById('add_inventory_btn').onclick = () => {
+
         const name = document.getElementById('add_inventory_name').value;
         const category = document.getElementById('add_inventory_category').value;
         const price = parseInt(document.getElementById('add_inventory_price').value);
@@ -40,9 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const newGroceryItem = new GroceryItem(name,category, price, quantity);
 
         groceryInventory.push(newGroceryItem);
-        displayContent(groceryInventory, 'list-of-inventory');
+        // displayContent(groceryInventory, 'list-of-inventory');
         displayContent(notifyLowInventory(groceryInventory), 'low-on-inventory');
         // console.log(notifyLowInventory(groceryInventory)); checks to on console if function working
 
+        addItemsToTable();
     }
 })
